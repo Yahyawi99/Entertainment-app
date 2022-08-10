@@ -1,0 +1,13 @@
+/* movies */
+.movies {
+	margin-bottom: 50px;
+}
+
+/* message */
+.msg {
+	color: var(--gray-400);
+	text-align: center;
+	margin: auto;
+	text-decoration: underline;
+	opacity: 0.4;
+}

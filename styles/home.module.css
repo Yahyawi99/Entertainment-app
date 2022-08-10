@@ -1,0 +1,187 @@
+/* *********************** */
+/* Shared classes */
+/* *********************** */
+/* title */
+.title {
+	color: var(--gray-400);
+	font-size: 1.5rem;
+	margin: 0px 0px 20px 0px;
+}
+/* Info */
+.info {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 5px;
+	z-index: 10;
+	color: var(--gray-400-75pc);
+}
+.info p:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.name {
+	font-weight: 600;
+	font-size: 1.25rem;
+	z-index: 10;
+	color: var(--gray-400-75pc);
+}
+
+/* Bookmark Icon */
+.bookmarkIcon {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	transform: scale(1);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	transition: 0.25s;
+	z-index: 10;
+}
+.bookmarkIcon:hover > svg path {
+	transition: 0.25s;
+	stroke: var(--gray-100);
+}
+.bookmarkIcon:hover {
+	background-color: var(--gray-400);
+}
+
+/* bookmarked */
+.bookmarkedItem {
+	background-color: var(--gray-400);
+}
+.bookmarkedItem > svg path {
+	stroke: var(--gray-100);
+}
+
+/* Play Icon */
+.playIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: var(--gray-400);
+	visibility: hidden;
+}
+.playIcon > div {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 5px 12px;
+	border-radius: 25px;
+}
+
+/* ************************ */
+/* ************************ */
+/* Trending */
+/* ************************ */
+/* ************************ */
+.trendingContainer {
+	margin-bottom: 30px;
+}
+
+/* trending Content */
+.trendingContent {
+	display: flex;
+	gap: 25px;
+	overflow-x: scroll;
+	padding-right: 0px;
+	padding-bottom: 10px;
+}
+.trendingContent::-webkit-scrollbar {
+	height: 5px;
+}
+.trendingContent::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+.trendingContent::-webkit-scrollbar-thumb {
+	background-color: var(--gray-300);
+	border-radius: 10px;
+}
+
+.trending {
+	min-width: 450px;
+	height: 210px;
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	padding: 0px 0px 15px 25px;
+	position: relative;
+	overflow: hidden;
+}
+
+.trending:hover .playIcon {
+	visibility: visible;
+}
+
+/* ************************ */
+/* ************************ */
+/* Recommended */
+/* ************************ */
+/* ************************ */
+.recommendedContent {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+	grid-auto-rows: auto;
+	justify-content: space-around;
+	gap: 25px;
+	row-gap: 40px;
+}
+.recommended {
+	cursor: pointer;
+	position: relative;
+}
+.recommended:hover .playIcon {
+	visibility: visible;
+}
+.recommendedImg {
+	min-height: 200px;
+	position: relative;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.recommended .bookmarkIcon {
+	top: 10px;
+	right: 10px;
+}
+
+/* ========================= */
+/* media query */
+/* ========================= */
+@media screen and (min-width: 0px) and (max-width: 500px) {
+	.recommendedContent {
+		grid-template-columns: repeat(auto-fit, 1fr);
+		gap: 5px;
+		row-gap: 25px;
+	}
+}
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+	.recommendedContent {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 225px));
+		gap: 5px;
+		row-gap: 25px;
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 300px) {
+	.trending {
+		min-width: 230px;
+	}
+}
+@media screen and (min-width: 300px) and (max-width: 580px) {
+	.trending {
+		min-width: 250px;
+	}
+}

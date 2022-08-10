@@ -1,0 +1,23 @@
+.main {
+	width: 100%;
+	display: flex;
+	gap: 30px;
+}
+
+.secondRow {
+	width: 100%;
+	padding: 10px 0px 10px 110px;
+}
+
+/* ========================= */
+/* media query */
+/* ========================= */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.secondRow {
+		padding: 0px;
+	}
+}

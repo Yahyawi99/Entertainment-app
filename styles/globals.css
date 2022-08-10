@@ -1,0 +1,39 @@
+:root {
+	/* typography */
+	--font-weight-light: 300;
+	--font-weight-medium: 500;
+	--font-size-100: 0.6875rem;
+	--font-size-200: 0.75rem;
+	--font-size-300: 0.875rem;
+	--font-size-400: 0.9375rem;
+	--font-size-500: 1.25rem;
+
+	/* color */
+	--gray-100: hsl(223deg, 30%, 9%);
+	--gray-200: hsl(223deg, 36%, 14%);
+	--gray-300: hsl(223deg, 23%, 46%);
+	--gray-400: hsl(223deg, 0%, 100%);
+	--gray-400-75pc: hsla(223deg, 0%, 100%, 0.75);
+	--red-300: hsl(0deg, 97%, 63%);
+}
+
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--gray-100);
+	padding: 25px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* ========================= */
+/* media query */
+/* ========================= */
+@media screen and (min-width: 0px) and (max-width: 300px) {
+	body {
+		padding: 5px;
+	}
+}

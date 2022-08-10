@@ -1,0 +1,120 @@
+/* title */
+.title {
+	color: var(--gray-400);
+	font-size: 1.6rem;
+	margin: 0px 0px 20px 0px;
+}
+/* Info */
+.info {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 5px;
+	z-index: 10;
+	color: var(--gray-400-75pc);
+}
+.info p:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.name {
+	font-weight: 600;
+	font-size: 1.1rem;
+	z-index: 10;
+	color: var(--gray-400-75pc);
+}
+
+/* Bookmark Icon */
+.bookmarkIcon {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	transform: scale(1);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	transition: 0.25s;
+	z-index: 10;
+}
+.bookmarkIcon:hover > svg path {
+	transition: 0.25s;
+	stroke: var(--gray-100);
+}
+.bookmarkIcon:hover {
+	background-color: var(--gray-400);
+}
+
+/* bookmarked */
+.bookmarkedItem {
+	background-color: var(--gray-400);
+}
+.bookmarkedItem > svg path {
+	stroke: var(--gray-100);
+}
+
+/* Play Icon */
+.playIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: var(--gray-400);
+	visibility: hidden;
+}
+.playIcon > div {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 5px 12px;
+	border-radius: 25px;
+}
+
+/* Container */
+.contentContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+	grid-auto-rows: auto;
+	justify-content: space-around;
+	column-gap: 25px;
+	row-gap: 40px;
+}
+
+/* movie */
+.content {
+	cursor: pointer;
+	position: relative;
+}
+.contentImg {
+	height: 200px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.contentImg:hover .playIcon {
+	visibility: visible;
+}
+
+/* ========================= */
+/* media query */
+/* ========================= */
+@media screen and (min-width: 0px) and (max-width: 510px) {
+	.contentContainer {
+		grid-template-columns: repeat(auto-fit, 100%);
+	}
+}
+@media screen and (min-width: 510px) and (max-width: 1000px) {
+	.contentContainer {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 225px));
+		justify-content: space-around;
+		column-gap: 5px;
+		row-gap: 25px;
+	}
+}
